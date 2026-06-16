@@ -1,0 +1,50 @@
+[
+  {
+    "slug": "wall",
+    "name": "กำแพงกันดิน",
+    "eyebrow": "งานโครงสร้าง • Retaining Wall",
+    "price": "฿ 2,800",
+    "priceUnit": "/ ตร.ม.",
+    "duration": "14–30 วัน"
+  },
+  {
+    "slug": "fence",
+    "name": "รั้วบ้าน",
+    "eyebrow": "งานภายนอก • Fencing",
+    "price": "฿ 1,500",
+    "priceUnit": "/ ตร.ม.",
+    "duration": "7–21 วัน"
+  },
+  {
+    "slug": "road",
+    "name": "ถนน & ทางเข้าบ้าน",
+    "eyebrow": "งานพื้น • Road & Driveway",
+    "price": "฿ 650",
+    "priceUnit": "/ ตร.ม.",
+    "duration": "5–15 วัน"
+  },
+  {
+    "slug": "slab",
+    "name": "ลานคอนกรีต",
+    "eyebrow": "งานพื้น • Concrete Slab",
+    "price": "฿ 550",
+    "priceUnit": "/ ตร.ม.",
+    "duration": "3–10 วัน"
+  },
+  {
+    "slug": "drain",
+    "name": "ระบบระบายน้ำ",
+    "eyebrow": "งานใต้ดิน • Drainage",
+    "price": "฿ 1,200",
+    "priceUnit": "/ เมตร",
+    "duration": "3–12 วัน"
+  },
+  {
+    "slug": "land",
+    "name": "ปรับพื้นที่ & ถมดิน",
+    "eyebrow": "งานพื้นฐาน • Earthworks",
+    "price": "฿ 220",
+    "priceUnit": "/ คิว",
+    "duration": "2–7 วัน"
+  }
+]

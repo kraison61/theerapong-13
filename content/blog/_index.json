@@ -1,0 +1,110 @@
+{
+  "featured": "choose-contractor",
+  "categories": {
+    "guide": "คู่มือเจ้าของบ้าน",
+    "cost": "งบประมาณ",
+    "tech": "เทคนิคงานช่าง",
+    "maintain": "ดูแลรักษา"
+  },
+  "posts": [
+    {
+      "slug": "retaining-wall-cost",
+      "cat": "cost",
+      "title": "กำแพงกันดินราคาเท่าไหร่? แจกแจงทุกค่าใช้จ่ายที่ต้องรู้",
+      "excerpt": "รวมต้นทุนกำแพงกันดินตั้งแต่เข็ม ฐานราก ไปจนถึงค่าแรง พร้อมวิธีคำนวณงบคร่าวๆ ก่อนขอใบเสนอราคา",
+      "img": "https://images.unsplash.com/photo-1590725140246-20acdee442be?w=700&q=80&auto=format&fit=crop",
+      "author": "ธ",
+      "authorName": "วิศวกร ธีรพงษ์",
+      "date": "28 พ.ค. 2569",
+      "read": "6 นาที"
+    },
+    {
+      "slug": "fence-styles",
+      "cat": "guide",
+      "title": "รั้วบ้าน 5 สไตล์ยอดนิยม เลือกแบบไหนเหมาะกับบ้านคุณ",
+      "excerpt": "เปรียบเทียบรั้วก่ออิฐ โมเดิร์น เหล็กดัด สำเร็จรูป และไม้เทียม ทั้งราคา ความทนทาน และการดูแล",
+      "img": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=700&q=80&auto=format&fit=crop",
+      "author": "ส",
+      "authorName": "ทีมงานช่าง",
+      "date": "24 พ.ค. 2569",
+      "read": "8 นาที"
+    },
+    {
+      "slug": "concrete-crack",
+      "cat": "tech",
+      "title": "ทำไมพื้นคอนกรีตถึงแตกร้าว? และวิธีป้องกันที่ช่างไม่ค่อยบอก",
+      "excerpt": "รอยร้าวบนพื้นคอนกรีตเกิดจากอะไร เทคนิคตัดร่อง เสริมตะแกรง และบ่มคอนกรีตที่ทำให้พื้นอยู่นาน 15+ ปี",
+      "img": "https://images.unsplash.com/photo-1604719312566-8912e9227c6a?w=700&q=80&auto=format&fit=crop",
+      "author": "ธ",
+      "authorName": "วิศวกร ธีรพงษ์",
+      "date": "20 พ.ค. 2569",
+      "read": "7 นาที"
+    },
+    {
+      "slug": "fill-soil-settle",
+      "cat": "tech",
+      "title": "ถมดินใหม่ ต้องรอกี่เดือนถึงสร้างบ้านได้?",
+      "excerpt": "ความจริงเรื่องการทรุดตัวของดินถม วิธีบดอัดที่ถูกต้อง และทำไมบางบ้านสร้างได้ทันที บางบ้านต้องรอเป็นปี",
+      "img": "https://images.unsplash.com/photo-1581235720704-06d3acfcb36f?w=700&q=80&auto=format&fit=crop",
+      "author": "ส",
+      "authorName": "ทีมงานช่าง",
+      "date": "16 พ.ค. 2569",
+      "read": "5 นาที"
+    },
+    {
+      "slug": "drainage-flood",
+      "cat": "guide",
+      "title": "บ้านน้ำท่วมขังทุกหน้าฝน แก้ได้ด้วยระบบระบายน้ำที่ถูกต้อง",
+      "excerpt": "สาเหตุน้ำท่วมขังรอบบ้าน การวางท่อ บ่อพัก และเมื่อไหร่ที่ต้องใช้ Sump Pit พร้อมปั๊มน้ำ",
+      "img": "https://images.unsplash.com/photo-1581094288338-2314dddb7ece?w=700&q=80&auto=format&fit=crop",
+      "author": "ธ",
+      "authorName": "วิศวกร ธีรพงษ์",
+      "date": "12 พ.ค. 2569",
+      "read": "6 นาที"
+    },
+    {
+      "slug": "polished-concrete-care",
+      "cat": "maintain",
+      "title": "ดูแลลานคอนกรีตขัดมันยังไง ให้เงาสวยอยู่ได้ 20 ปี",
+      "excerpt": "วิธีทำความสะอาดที่ถูกต้อง น้ำยาที่ห้ามใช้ และรอบการเคลือบ Sealer เพื่อยืดอายุพื้นขัดมัน",
+      "img": "https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=700&q=80&auto=format&fit=crop",
+      "author": "ส",
+      "authorName": "ทีมงานช่าง",
+      "date": "8 พ.ค. 2569",
+      "read": "5 นาที"
+    },
+    {
+      "slug": "contract-payment",
+      "cat": "cost",
+      "title": "งวดงานก่อสร้างแบ่งจ่ายยังไงถึงปลอดภัยทั้งสองฝ่าย",
+      "excerpt": "โครงสร้างการแบ่งงวดที่เป็นธรรม เอกสารที่ต้องมีทุกงวด และสัญญาณเตือนเมื่อผู้รับเหมาขอเงินผิดปกติ",
+      "img": "https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?w=700&q=80&auto=format&fit=crop",
+      "author": "ธ",
+      "authorName": "วิศวกร ธีรพงษ์",
+      "date": "4 พ.ค. 2569",
+      "read": "7 นาที"
+    },
+    {
+      "slug": "permit-guide",
+      "cat": "guide",
+      "title": "งานก่อสร้างแบบไหนต้องขออนุญาต? คู่มือฉบับเจ้าของบ้าน",
+      "excerpt": "รั้ว กำแพง ต่อเติม แบบไหนต้องยื่นเทศบาล แบบไหนทำได้เลย พร้อมขั้นตอนและเอกสารที่ต้องเตรียม",
+      "img": "https://images.unsplash.com/photo-1486718448742-163732cd1544?w=700&q=80&auto=format&fit=crop",
+      "author": "ส",
+      "authorName": "ทีมงานช่าง",
+      "date": "30 เม.ย. 2569",
+      "read": "6 นาที"
+    },
+    {
+      "slug": "rainy-season-build",
+      "cat": "tech",
+      "title": "สร้างบ้านหน้าฝนได้ไหม? ข้อควรระวังงานคอนกรีตช่วงฝนตก",
+      "excerpt": "ผลกระทบของฝนต่องานคอนกรีต การป้องกันหน้างาน และงานประเภทไหนที่ควรเลื่อนไปหน้าแล้ง",
+      "img": "https://images.unsplash.com/photo-1517089596392-fb9a9033e05b?w=700&q=80&auto=format&fit=crop",
+      "author": "ธ",
+      "authorName": "วิศวกร ธีรพงษ์",
+      "date": "26 เม.ย. 2569",
+      "read": "5 นาที"
+    }
+  ]
+}

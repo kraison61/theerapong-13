@@ -1,0 +1,46 @@
+<?php
+
+namespace App\Livewire;
+
+use Livewire\Attributes\Computed;
+use Livewire\Component;
+
+class ProjectGrid extends Component
+{
+    public string $filter = 'all';
+
+    /** @var list<array{cat:string,img:string,tag:string,title:string,meta:string}> */
+    private const PROJECTS = [
+        ['cat' => 'wall',  'img' => '1590725140246-20acdee442be', 'tag' => 'กำแพงกันดิน',   'title' => 'กำแพงกันดิน บางบัวทอง',           'meta' => 'ยาว 64 ม. · เข็มเจาะ Ø35 ซม. · 28 วัน'],
+        ['cat' => 'fence', 'img' => '1558618666-fcd25c85cd64',   'tag' => 'รั้วบ้าน',        'title' => 'รั้วโมเดิร์น พร้อมประตูรีโมท',    'meta' => 'ยาว 38 ม. · ราชพฤกษ์ · 18 วัน'],
+        ['cat' => 'road',  'img' => '1518709268805-4e9042af9f23', 'tag' => 'ถนน & ทางเข้า',  'title' => 'ทางเข้าหมู่บ้านคอนกรีต',          'meta' => '850 ตร.ม. · ปทุมธานี · 14 วัน'],
+        ['cat' => 'slab',  'img' => '1604719312566-8912e9227c6a', 'tag' => 'ลานคอนกรีต',     'title' => 'ลานจอดรถคอนกรีตขัดมัน',           'meta' => '120 ตร.ม. · นนทบุรี · 7 วัน'],
+        ['cat' => 'wall',  'img' => '1517089596392-fb9a9033e05b', 'tag' => 'กำแพงกันดิน',   'title' => 'กำแพงคันสระ บางใหญ่',             'meta' => 'ยาว 120 ม. · สูง 2.4 ม. · 45 วัน'],
+        ['cat' => 'drain', 'img' => '1581094288338-2314dddb7ece', 'tag' => 'ระบายน้ำ',       'title' => 'วางท่อระบายรอบบ้าน',              'meta' => 'ยาว 86 ม. · Ø60 ซม. · 10 วัน'],
+        ['cat' => 'fence', 'img' => '1486718448742-163732cd1544', 'tag' => 'รั้วบ้าน',        'title' => 'รั้วก่ออิฐ ทาวน์โฮม 6 หลัง',      'meta' => 'ยาว 156 ม. · นวนคร · 24 วัน'],
+        ['cat' => 'slab',  'img' => '1581235720704-06d3acfcb36f', 'tag' => 'ลานคอนกรีต',     'title' => 'ลานคอนกรีตโรงเก็บของ',            'meta' => '240 ตร.ม. · ลาดกระบัง · 9 วัน'],
+    ];
+
+    /** Filtered project list — cached per render via #[Computed] */
+    #[Computed]
+    public function projects(): array
+    {
+        if ($this->filter === 'all') {
+            return self::PROJECTS;
+        }
+
+        return array_values(
+            array_filter(self::PROJECTS, fn (array $p) => $p['cat'] === $this->filter)
+        );
+    }
+
+    public function setFilter(string $filter): void
+    {
+        $this->filter = $filter;
+    }
+
+    public function render(): \Illuminate\Contracts\View\View
+    {
+        return view('livewire.project-grid');
+    }
+}

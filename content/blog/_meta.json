@@ -1,0 +1,42 @@
+{
+  "choose-contractor": {
+    "title": "7 ข้อต้องเช็ค ก่อนเลือกผู้รับเหมาก่อสร้าง",
+    "cat": "guide",
+    "img": "https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=600&q=80&auto=format&fit=crop"
+  },
+  "retaining-wall-cost": {
+    "title": "กำแพงกันดินราคาเท่าไหร่? แจกแจงทุกค่าใช้จ่าย",
+    "cat": "cost",
+    "img": "https://images.unsplash.com/photo-1590725140246-20acdee442be?w=600&q=80&auto=format&fit=crop"
+  },
+  "concrete-crack": {
+    "title": "ทำไมพื้นคอนกรีตถึงแตกร้าว? และวิธีป้องกัน",
+    "cat": "tech",
+    "img": "https://images.unsplash.com/photo-1604719312566-8912e9227c6a?w=600&q=80&auto=format&fit=crop"
+  },
+  "fill-soil-settle": {
+    "title": "ถมดินใหม่ ต้องรอกี่เดือนถึงสร้างบ้านได้?",
+    "cat": "tech",
+    "img": "https://images.unsplash.com/photo-1581235720704-06d3acfcb36f?w=600&q=80&auto=format&fit=crop"
+  },
+  "drainage-flood": {
+    "title": "บ้านน้ำท่วมขังทุกหน้าฝน แก้ได้ด้วยระบบระบายน้ำ",
+    "cat": "guide",
+    "img": "https://images.unsplash.com/photo-1581094288338-2314dddb7ece?w=600&q=80&auto=format&fit=crop"
+  },
+  "contract-payment": {
+    "title": "งวดงานก่อสร้างแบ่งจ่ายยังไงถึงปลอดภัย",
+    "cat": "cost",
+    "img": "https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?w=600&q=80&auto=format&fit=crop"
+  },
+  "permit-guide": {
+    "title": "งานก่อสร้างแบบไหนต้องขออนุญาต?",
+    "cat": "guide",
+    "img": "https://images.unsplash.com/photo-1486718448742-163732cd1544?w=600&q=80&auto=format&fit=crop"
+  },
+  "rainy-season-build": {
+    "title": "สร้างบ้านหน้าฝนได้ไหม? ข้อควรระวังงานคอนกรีต",
+    "cat": "tech",
+    "img": "https://images.unsplash.com/photo-1517089596392-fb9a9033e05b?w=600&q=80&auto=format&fit=crop"
+  }
+}
