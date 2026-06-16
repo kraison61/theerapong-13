@@ -299,21 +299,37 @@
         </div>
 
         <div class="lg:col-span-7 space-y-3">
-            <flux:accordion>
+            {{-- เปลี่ยนจาก flux:accordion เป็น Alpine.js เพื่อรองรับ Flux Free --}}
+            <div class="space-y-3" x-data="{ active: 0 }"> {{-- กำหนดให้ active: 0 เพื่อให้เปิดข้อแรกเสมอ --}}
                 @foreach ($faqs as $i => $faq)
-                    <flux:accordion.item
-                        @if($i === 0) expanded @endif
-                        class="rounded-2xl border border-line bg-white px-5"
-                    >
-                        <flux:accordion.heading class="flex items-center justify-between gap-4 py-4 font-semibold text-navy-900 cursor-pointer">
-                            {{ $faq['q'] }}
-                        </flux:accordion.heading>
-                        <flux:accordion.content class="pb-5 text-[15px] text-ink2 leading-relaxed">
+                    <div class="rounded-2xl border border-line bg-white px-5">
+                        
+                        {{-- Heading (ปุ่มกดเปิด-ปิด) --}}
+                        <button 
+                            type="button"
+                            @click="active = active === {{ $i }} ? null : {{ $i }}"
+                            class="w-full flex items-center justify-between gap-4 py-4 font-semibold text-navy-900 cursor-pointer text-left focus:outline-none"
+                        >
+                            <span>{{ $faq['q'] }}</span>
+                            {{-- ใช้ Bootstrap Icon ตามธีมเว็บของคุณ พร้อมแอนิเมชันหมุนศร --}}
+                            <i class="bi bi-chevron-down text-lg transition-transform duration-200" 
+                               :class="active === {{ $i }} ? 'rotate-180' : ''">
+                            </i>
+                        </button>
+
+                        {{-- Content (เนื้อหาที่ซ่อนอยู่) --}}
+                        <div 
+                            x-show="active === {{ $i }}" 
+                            x-collapse {{-- ใช้ x-collapse ของ Alpine (มาพร้อม Livewire) เพื่อให้เปิดปิดนุ่มนวล --}}
+                            x-cloak
+                            class="pb-5 text-[15px] text-ink2 leading-relaxed"
+                        >
                             {!! $faq['a'] !!}
-                        </flux:accordion.content>
-                    </flux:accordion.item>
+                        </div>
+
+                    </div>
                 @endforeach
-            </flux:accordion>
+            </div>
         </div>
 
     </div>
