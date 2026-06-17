@@ -33,7 +33,7 @@
     <livewire:testimonials />
 
     {{-- ============ FAQ (Flux Accordion) ============ --}}
-    <x-contact :faqs="$faqs" />
+    <x-faq :faqs="$faqs" />
 
     {{-- ============ CONTACT ============ --}}
     <x-contact />

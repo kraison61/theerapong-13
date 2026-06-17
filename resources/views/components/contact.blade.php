@@ -18,21 +18,21 @@
                     <i class="bi bi-telephone-fill text-hivis text-xl shrink-0"></i>
                     <div>
                         <div class="text-[13px] text-white/50">โทรเลย</div>
-                        <div class="font-mono tabular-nums text-xl font-semibold">081-234-5678</div>
+                        <div class="font-mono tabular-nums text-xl font-semibold"><a href="tel:+66627188847">{{ config('company.phone') }}</a></div>
                     </div>
                 </li>
                 <li class="flex gap-3.5">
                     <i class="bi bi-envelope-fill text-hivis text-xl shrink-0"></i>
                     <div>
                         <div class="text-[13px] text-white/50">อีเมล</div>
-                        <div class="font-medium">work@theeraphong.co.th</div>
+                        <div class="font-medium"><a href="mailto:{{ config('company.email') }}" target="_blank" >{{ config('company.email') }}</a></div>
                     </div>
                 </li>
                 <li class="flex gap-3.5">
                     <i class="bi bi-geo-alt-fill text-hivis text-xl shrink-0"></i>
                     <div>
                         <div class="text-[13px] text-white/50">สำนักงาน</div>
-                        <div class="font-medium">88/15 ถ.กาญจนาภิเษก บางใหญ่ นนทบุรี 11140</div>
+                        <div class="font-medium"><a href="https://maps.app.goo.gl/toHbNT1QRe3D9uP86" target="_blank" >{{ config('company.address') }}</a></div>
                     </div>
                 </li>
                 <li class="flex gap-3.5">

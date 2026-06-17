@@ -8,11 +8,11 @@
                 <span class="w-7 h-px bg-navy-700"></span> ขั้นตอนการทำงาน
             </span>
             <h2 class="mt-4 text-4xl lg:text-5xl font-bold tracking-tight text-navy-900 leading-tight">
-                โปร่งใส ตรวจสอบได้ ทุกขั้นตอน
+                ขั้นตอนการทำงานที่เป็นระบบ (Our 4-Step Working Process)
             </h2>
         </div>
         <p class="lg:col-span-5 text-lg text-ink2 leading-relaxed">
-            ลูกค้าทราบงบประมาณ ระยะเวลา และทีมงานก่อนเริ่มงานจริงเสมอ — ไม่มีค่าใช้จ่ายแอบแฝง
+            เพื่อให้งานก่อสร้างออกมาสมบูรณ์แบบและงบประมาณไม่บานปลาย เราใช้กระบวนการทำงานที่มีลำดับขั้นตอนชัดเจนดังนี้:
         </p>
     </div>
 

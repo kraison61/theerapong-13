@@ -49,9 +49,9 @@
             <h3 class="text-white font-semibold mb-3.5 text-[15px]">ติดต่อ</h3>
             <ul class="space-y-2.5 text-[15px]">
                 <li><i class="bi bi-telephone-fill text-hivis mr-2"></i><span
-                        class="font-mono tabular-nums">081-234-5678</span></li>
-                <li><i class="bi bi-envelope-fill text-hivis mr-2"></i>work@theeraphong.co.th</li>
-                <li><i class="bi bi-geo-alt-fill text-hivis mr-2"></i>88/15 ถ.กาญจนาภิเษก บางใหญ่ นนทบุรี 11140</li>
+                        class="font-mono tabular-nums">{{ config('company.phone') }}</span></li>
+                <li><i class="bi bi-envelope-fill text-hivis mr-2"></i>{{ config('company.email') }}</li>
+                <li><i class="bi bi-geo-alt-fill text-hivis mr-2"></i>{{ config('company.address') }}</li>
             </ul>
         </div>
 
@@ -59,7 +59,7 @@
 
     <div class="border-t border-white/10">
         <div class="mx-auto max-w-7xl px-6 py-5 flex flex-wrap justify-between gap-2 text-[14px]">
-            <div>© {{ date('Y') }} ห้างหุ้นส่วนจำกัด ธีรพงษ์การช่าง · เลขผู้เสียภาษี 0125555012345</div>
+            <div>© {{ date('Y') }} {{ config('company.name') }} · เลขผู้เสียภาษี {{ config('company.taxid') }}</div>
             <div class="flex gap-5">
                 <a href="#" class="hover:text-white transition">นโยบายความเป็นส่วนตัว</a>
                 <a href="#" class="hover:text-white transition">เงื่อนไขการให้บริการ</a>

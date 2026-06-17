@@ -6,7 +6,7 @@
                 <span class="w-7 h-px bg-navy-700"></span> เสียงจากลูกค้าจริง
             </span>
             <h2 class="mt-4 text-4xl lg:text-5xl font-bold tracking-tight text-navy-900 leading-tight">
-                ลูกค้ากว่า 400 บ้านพูดเป็นเสียงเดียวกัน
+                ลูกค้ากว่า 150+ บ้านพูดเป็นเสียงเดียวกัน
             </h2>
         </div>
 

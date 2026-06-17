@@ -13,7 +13,7 @@
             </h2>
             <p class="mt-4 text-lg text-ink2 leading-relaxed">
                 หากไม่พบคำตอบที่ต้องการ โทร
-                <a href="tel:0812345678" class="font-mono tabular-nums text-accent font-semibold">081-234-5678</a>
+                <a href="tel:{{ config('company.phone') }}" class="font-mono tabular-nums text-accent font-semibold">{{ config('company.phone') }}</a>
                 ทีมงานพร้อมตอบทุกวันจันทร์–เสาร์ 8:00–18:00
             </p>
             <flux:button href="#contact"
