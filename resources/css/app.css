@@ -8,28 +8,34 @@
 @source "../../app/**/*.php";
 
 @theme {
-    --color-navy-950: #04111d;
-    --color-navy-900: #071a2c;
-    --color-navy-800: #0a2540;
-    --color-navy-700: #0a3d62;
-    --color-accent:   #0a3d62;
-    --color-hivis:    #ffc83a;
-    --color-ink:      #0f1722;
-    --color-ink2:     #36475a;
-    --color-muted:    #6a7787;
-    --color-line:     #e3e7ee;
-    --color-surface:  #f6f8fb;
+    /* ── 60 % ── Navy Blue · Trust & structural backgrounds ── */
+    --color-navy-950: #060F1E;   /* Midnight navy  — footer, utility bar       */
+    --color-navy-900: #0B2341;   /* Deep navy      — stats, contact, dark secs  */
+    --color-navy-800: #122E58;   /* Mid navy       — hover fills                */
+    --color-navy-700: #1A3F78;   /* Medium navy    — eyebrows, structural icons  */
+
+    /* ── 10 % ── Safety Orange · Action & CTA ONLY ── */
+    --color-accent:   #F97316;   /* Safety Orange  — ALL buttons & CTA links    */
+    --color-hivis:    #F97316;   /* Same orange    — icons/badges on dark bg     */
+
+    /* ── 30 % ── Steel Gray / Charcoal · Strength, text, structure ── */
+    --color-ink:      #1E2D3D;   /* Charcoal       — headings                   */
+    --color-ink2:     #374151;   /* Dark steel     — body text                  */
+    --color-muted:    #64748B;   /* Medium steel   — captions, meta             */
+    --color-line:     #CBD5E1;   /* Light steel    — borders & dividers         */
+    --color-surface:  #F1F5F9;   /* Cool off-white — section backgrounds        */
 
     --font-sans: "IBM Plex Sans Thai", "IBM Plex Sans", ui-sans-serif, system-ui, sans-serif;
     --font-mono: "IBM Plex Sans", ui-sans-serif, system-ui, sans-serif;
 }
 
 /*
- * Override Flux UI accent colour to match brand navy.
- * Flux reads --color-accent as an OKLCH triplet; we map our hex to OKLCH here.
+ * Flux UI v2.x reads --color-accent as OKLCH for its interactive components.
+ * Safety Orange #F97316 → oklch(0.70 0.19 40)
+ * This drives Flux button, input focus rings, checkbox, etc.
  */
 :root {
-    --color-accent: oklch(0.22 0.05 250);   /* ≈ navy-900 */
+    --color-accent: oklch(0.70 0.19 40);   /* Safety Orange #F97316 */
 }
 
 /* Hide Alpine x-cloak elements before hydration */

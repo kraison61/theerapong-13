@@ -2,8 +2,8 @@
     <div class="mx-auto max-w-7xl px-6 py-20 lg:py-28">
 
         <div class="text-center max-w-2xl mx-auto">
-            <span class="inline-flex items-center gap-2 text-accent font-semibold tracking-[0.18em] text-xs uppercase">
-                <span class="w-7 h-px bg-accent"></span> เสียงจากลูกค้าจริง
+            <span class="inline-flex items-center gap-2 text-navy-700 font-semibold tracking-[0.18em] text-xs uppercase">
+                <span class="w-7 h-px bg-navy-700"></span> เสียงจากลูกค้าจริง
             </span>
             <h2 class="mt-4 text-4xl lg:text-5xl font-bold tracking-tight text-navy-900 leading-tight">
                 ลูกค้ากว่า 400 บ้านพูดเป็นเสียงเดียวกัน

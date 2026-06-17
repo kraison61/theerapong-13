@@ -2,8 +2,8 @@
     <div class="mx-auto max-w-7xl px-6 py-20 lg:py-28">
 
         <div class="max-w-2xl">
-            <span class="inline-flex items-center gap-2 text-accent font-semibold tracking-[0.18em] text-xs uppercase">
-                <span class="w-7 h-px bg-accent"></span> ผลงานที่ผ่านมา
+            <span class="inline-flex items-center gap-2 text-navy-700 font-semibold tracking-[0.18em] text-xs uppercase">
+                <span class="w-7 h-px bg-navy-700"></span> ผลงานที่ผ่านมา
             </span>
             <h2 class="mt-4 text-4xl lg:text-5xl font-bold tracking-tight text-navy-900 leading-tight">
                 ผลงานก่อสร้างจริง — ลูกค้าจริง พื้นที่จริง
