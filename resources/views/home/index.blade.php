@@ -11,6 +11,8 @@
     {{-- ============ NAV (Alpine.js สำหรับ mobile toggle) ============ --}}
     <x-nav />
 
+    <x-breadcrumb />
+
     {{-- ============ HERO ============ --}}
     <x-hero />
 
@@ -35,10 +37,5 @@
     {{-- ============ FAQ (Flux Accordion) ============ --}}
     <x-faq :faqs="$faqs" />
 
-    {{-- ============ CONTACT ============ --}}
-    <x-contact />
-
-    {{-- ============ FOOTER ============ --}}
-    <x-footer :services="$services" />
 
 @endsection

@@ -1,4 +1,4 @@
-<header id="nav" class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-line" x-data="{ open: false }">
+<header id="nav" class=" top-0 z-50 bg-white/90 backdrop-blur-md border-b border-line" x-data="{ open: false }">
     <nav class="mx-auto max-w-7xl px-6 h-[68px] flex items-center justify-between gap-4">
 
         {{-- Logo --}}
