@@ -4,6 +4,7 @@ namespace App\Livewire;
 
 use Livewire\Attributes\Validate;
 use Livewire\Component;
+use Illuminate\Support\Str;
 
 class ContactForm extends Component
 {
@@ -25,6 +26,9 @@ class ContactForm extends Component
 
     public bool $submitted = false;
 
+    // เพิ่มตัวแปรสำหรับเก็บรหัสส่วนลด
+    public string $discountCode = '';
+
     public array $budgetOptions = [
         'ต่ำกว่า 100,000 บาท',
         '100,000 – 500,000 บาท',
@@ -43,16 +47,26 @@ class ContactForm extends Component
         'งานอื่นๆ / รวมหลายงาน',
     ];
 
+    public function mount(): void
+    {
+        // สุ่มรหัสส่วนลดเมื่อ Component ถูกโหลดครั้งแรก
+        $this->discountCode = 'TP-' . strtoupper(Str::random(5));
+    }
+
     public function submit(): void
     {
         $this->validate();
 
         // TODO: ส่งอีเมล / บันทึกฐานข้อมูล
+        // อย่าลืมนำ $this->discountCode ไปบันทึกลงฐานข้อมูลหรือแนบไปกับ Email ด้วย
         // \Illuminate\Support\Facades\Mail::to('work@theeraphong.co.th')
-        //     ->send(new \App\Mail\QuoteRequested($this->only('name','phone','service','budget','detail')));
+        //     ->send(new \App\Mail\QuoteRequested(array_merge($this->only('name','phone','service','budget','detail'), ['discount_code' => $this->discountCode])));
 
         $this->reset(['name', 'phone', 'service', 'detail', 'accepted']);
         $this->submitted = true;
+
+        // หากต้องการสุ่มรหัสใหม่หลังส่งฟอร์มเสร็จ สามารถเรียกใช้บรรทัดล่างนี้ได้
+        // $this->discountCode = 'TP-' . strtoupper(Str::random(5));
     }
 
     /**

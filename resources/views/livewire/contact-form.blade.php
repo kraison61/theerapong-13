@@ -67,16 +67,42 @@
             </flux:field>
         </div>
 
-        {{-- ไฮไลท์: รหัสส่วนลด (Hybrid Approach) --}}
+        {{-- ไฮไลท์: รหัสส่วนลด (Hybrid Approach พร้อมปุ่ม Copy) --}}
         <div class="sm:col-span-2">
             <flux:field>
-                <flux:label class="block text-sm font-medium text-green-700 mb-1.5">
-                    รหัสส่วนลดของคุณ (แนบให้เซลส์อัตโนมัติ)
+                <flux:label class="block text-sm font-medium text-emerald-800 mb-1.5 flex items-center gap-1.5">
+                    <i class="bi bi-tags-fill text-emerald-600"></i>
+                    สิทธิ์ส่วนลดพิเศษสำหรับคุณ (แนบให้เซลส์อัตโนมัติ)
                 </flux:label>
-                <flux:input wire:model="discountCode" name="discount_code" readonly
-                    class="w-full rounded-xl border-green-300 bg-green-50/50 text-green-700 font-bold uppercase tracking-wider focus:ring-0 cursor-not-allowed" />
+
+                <div x-data="{ 
+                    code: @entangle('discountCode'), 
+                    copied: false,
+                    copyToClipboard() {
+                        navigator.clipboard.writeText(this.code);
+                        this.copied = true;
+                        setTimeout(() => this.copied = false, 2000);
+                    }
+                }" class="flex flex-col sm:flex-row items-stretch sm:items-center gap-2">
+
+                    <div class="relative flex-1">
+                        <flux:input x-model="code" name="discount_code" readonly
+                            class="w-full rounded-xl border-emerald-200 bg-emerald-50/40 text-emerald-700 font-mono text-lg font-bold uppercase tracking-widest pl-4 pr-10 py-2.5 focus:ring-0 cursor-not-allowed" />
+
+                        <div x-show="copied" x-cloak class="absolute right-3 top-1/2 -translate-y-1/2 text-emerald-600">
+                            <i class="bi bi-check-lg text-xl"></i>
+                        </div>
+                    </div>
+
+                    <flux:button type="button" @click="copyToClipboard"
+                        class="rounded-xl border border-emerald-200 bg-white text-emerald-700 hover:bg-emerald-50 px-4 py-2.5 font-medium transition flex items-center justify-center gap-2 sm:w-auto w-full">
+                        <i class="bi bi-clipboard" x-show="!copied"></i>
+                        <span x-text="copied ? 'คัดลอกแล้ว!' : 'คัดลอกรหัส'"></span>
+                    </flux:button>
+                </div>
+
                 <p class="mt-1.5 text-xs text-muted">
-                    * คุณสามารถแคปเจอร์หน้าจอนี้เพื่อแจ้งแอดมินทาง Line ได้ หรือกรอกฟอร์มให้เสร็จเพื่อรับสิทธิ์ทันที
+                    * คุณสามารถคัดลอกรหัสเพื่อแจ้งแอดมินทาง Line ได้ หรือกรอกฟอร์มให้เสร็จเพื่อรับสิทธิ์ทันที
                 </p>
             </flux:field>
         </div>
