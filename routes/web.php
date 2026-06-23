@@ -17,6 +17,9 @@ Route::prefix('services')->group(function () {
     Route::get('/service/{slug?}', [ServiceController::class, 'show'])->name('services.show');
 });
 
+Route::get('/about', fn() => view('home.about'))->name('about');
+Route::get('/contact', fn() => view('home.contact'))->name('contact');
+
 Route::get('/blog', fn() => view('blog.index'))->name('blog.index');
 
 Route::get('/portal', fn() => view('portal.index'))->name('portal.index');

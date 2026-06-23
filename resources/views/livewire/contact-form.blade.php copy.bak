@@ -8,7 +8,7 @@
         </div>
     @endif
 
-    {{-- Livewire v4: wire:submit จัดการ default event อัตโนมัติ --}}
+    {{-- Livewire v4: wire:submit ป้องกัน default อัตโนมัติ ไม่ต้องใช้ .prevent --}}
     <form wire:submit="submit" novalidate class="grid sm:grid-cols-2 gap-5">
 
         {{-- ชื่อ–นามสกุล --}}
@@ -17,8 +17,13 @@
                 <flux:label class="block text-sm font-medium text-navy-900 mb-1.5">
                     ชื่อ–นามสกุล <span class="text-red-500">*</span>
                 </flux:label>
-                <flux:input wire:model.live="name" name="name" placeholder="กรุณากรอกชื่อ-นามสกุล"
-                    class="w-full rounded-xl border-line focus:border-accent focus:ring-2 focus:ring-accent/15" />
+                {{-- Livewire v4: parallel requests ทำให้ debounce ไม่จำเป็น --}}
+                <flux:input
+                    wire:model.live="name"
+                    name="name"
+                    placeholder="กรุณากรอกชื่อ-นามสกุล"
+                    class="w-full rounded-xl border-line focus:border-accent focus:ring-2 focus:ring-accent/15"
+                />
                 <flux:error name="name" class="mt-1 text-xs text-red-500" />
             </flux:field>
         </div>
@@ -29,8 +34,13 @@
                 <flux:label class="block text-sm font-medium text-navy-900 mb-1.5">
                     เบอร์โทรศัพท์ <span class="text-red-500">*</span>
                 </flux:label>
-                <flux:input wire:model.live="phone" name="phone" placeholder="08X-XXX-XXXX" inputmode="tel"
-                    class="w-full rounded-xl border-line font-mono tabular-nums focus:border-accent focus:ring-2 focus:ring-accent/15" />
+                <flux:input
+                    wire:model.live="phone"
+                    name="phone"
+                    placeholder="08X-XXX-XXXX"
+                    inputmode="tel"
+                    class="w-full rounded-xl border-line font-mono tabular-nums focus:border-accent focus:ring-2 focus:ring-accent/15"
+                />
                 <flux:error name="phone" class="mt-1 text-xs text-red-500" />
             </flux:field>
         </div>
@@ -41,8 +51,12 @@
                 <flux:label class="block text-sm font-medium text-navy-900 mb-1.5">
                     ประเภทงาน <span class="text-red-500">*</span>
                 </flux:label>
-                <flux:select wire:model.live="service" name="service"
-                    class="w-full rounded-xl border-line focus:border-accent bg-white">
+                {{-- Livewire v4: wire:model.live validates ทันทีผ่าน #[Validate] --}}
+                <flux:select
+                    wire:model.live="service"
+                    name="service"
+                    class="w-full rounded-xl border-line focus:border-accent bg-white"
+                >
                     <option value="">เลือกประเภทงาน...</option>
                     @foreach ($serviceOptions as $opt)
                         <option value="{{ $opt }}">{{ $opt }}</option>
@@ -58,26 +72,15 @@
                 <flux:label class="block text-sm font-medium text-navy-900 mb-1.5">
                     งบประมาณคร่าวๆ
                 </flux:label>
-                <flux:select wire:model="budget" name="budget"
-                    class="w-full rounded-xl border-line focus:border-accent bg-white">
+                <flux:select
+                    wire:model="budget"
+                    name="budget"
+                    class="w-full rounded-xl border-line focus:border-accent bg-white"
+                >
                     @foreach ($budgetOptions as $opt)
                         <option value="{{ $opt }}" @selected($budget === $opt)>{{ $opt }}</option>
                     @endforeach
                 </flux:select>
-            </flux:field>
-        </div>
-
-        {{-- ไฮไลท์: รหัสส่วนลด (Hybrid Approach) --}}
-        <div class="sm:col-span-2">
-            <flux:field>
-                <flux:label class="block text-sm font-medium text-green-700 mb-1.5">
-                    รหัสส่วนลดของคุณ (แนบให้เซลส์อัตโนมัติ)
-                </flux:label>
-                <flux:input wire:model="discountCode" name="discount_code" readonly
-                    class="w-full rounded-xl border-green-300 bg-green-50/50 text-green-700 font-bold uppercase tracking-wider focus:ring-0 cursor-not-allowed" />
-                <p class="mt-1.5 text-xs text-muted">
-                    * คุณสามารถแคปเจอร์หน้าจอนี้เพื่อแจ้งแอดมินทาง Line ได้ หรือกรอกฟอร์มให้เสร็จเพื่อรับสิทธิ์ทันที
-                </p>
             </flux:field>
         </div>
 
@@ -87,9 +90,13 @@
                 <flux:label class="block text-sm font-medium text-navy-900 mb-1.5">
                     รายละเอียดงาน
                 </flux:label>
-                <flux:textarea wire:model="detail" name="detail" rows="4"
+                <flux:textarea
+                    wire:model="detail"
+                    name="detail"
+                    rows="4"
                     placeholder="เช่น ขนาดพื้นที่, ความสูง, ระยะเวลาที่ต้องการ ฯลฯ"
-                    class="w-full rounded-xl border-line focus:border-accent focus:ring-2 focus:ring-accent/15" />
+                    class="w-full rounded-xl border-line focus:border-accent focus:ring-2 focus:ring-accent/15"
+                />
             </flux:field>
         </div>
 
@@ -108,8 +115,12 @@
 
         {{-- Submit --}}
         <div class="sm:col-span-2 flex flex-wrap items-center gap-4">
-            <flux:button type="submit" wire:loading.attr="disabled"
-                class="rounded-xl bg-accent hover:bg-navy-900 text-white px-7 py-3.5 font-semibold transition data-loading:opacity-60 data-loading:pointer-events-none">
+            {{-- Livewire v4: data-loading:* class ใช้แทน wire:loading ได้ แต่ wire:loading ยังรองรับ --}}
+            <flux:button
+                type="submit"
+                wire:loading.attr="disabled"
+                class="rounded-xl bg-accent hover:bg-navy-900 text-white px-7 py-3.5 font-semibold transition data-loading:opacity-60 data-loading:pointer-events-none"
+            >
                 <span wire:loading.remove wire:target="submit">
                     ส่งคำขอเสนอราคา <i class="bi bi-arrow-right ml-1"></i>
                 </span>
