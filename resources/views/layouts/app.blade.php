@@ -28,6 +28,13 @@
 
 <body class="font-sans text-ink bg-white antialiased [text-wrap:pretty] pb-[70px] lg:pb-0">
 
+{{-- ============ UTILITY BAR ============ --}}
+    <x-utility-bar />
+
+    {{-- ============ NAV ============ --}}
+    <x-nav />
+    {{-- ============ Breadcrumb ============ --}}
+    <x-breadcrumb />
     @yield('content')
 
     {{-- Livewire v4: auto-injects its own scripts — ไม่ต้อง @livewireScripts --}}

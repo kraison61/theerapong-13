@@ -25,12 +25,23 @@
         </div>
 
         <div class="md:col-span-2">
-            <h3 class="text-white font-semibold mb-3.5 text-[15px]">บริการ</h3>
+            <h3 class="text-white font-semibold mb-3.5 text-[15px]">บริการเด่น</h3>
             <ul class="space-y-2.5 text-[15px]">
-                @foreach ($services as $svc)
-                    <li><a href="{{ route('services.index', $svc['slug']) }}"
-                            class="hover:text-white transition">{{ $svc['name'] }}</a></li>
+                {{-- โชว์เฉพาะ 6 บริการหลักเพื่อให้ Footer ดูสะอาดตา --}}
+                @foreach (array_slice($services, 0, 6) as $svc)
+                    <li>
+                        <a href="{{ route('services.index', $svc['slug']) }}" class="hover:text-white transition">
+                            {{ $svc['name'] }}
+                        </a>
+                    </li>
                 @endforeach
+                
+                {{-- ลิงก์ไปหน้าบริการทั้งหมด --}}
+                <li class="pt-2">
+                    <a href="{{ route('services.index') }}" class="text-accent font-semibold hover:text-white transition flex items-center gap-1">
+                        ดูบริการทั้งหมด <i class="bi bi-arrow-right"></i>
+                    </a>
+                </li>
             </ul>
         </div>
 
@@ -66,4 +77,5 @@
             </div>
         </div>
     </div>
+
 </footer>

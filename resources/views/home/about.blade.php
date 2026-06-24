@@ -5,11 +5,9 @@
 
 @section('content')
 
-    {{-- ============ UTILITY BAR ============ --}}
-    <x-utility-bar />
+    
 
-    {{-- ============ NAV ============ --}}
-    <x-nav />
+
 
     {{-- ============ HERO ============ --}}
     <section class="relative overflow-hidden bg-navy-900 text-white">

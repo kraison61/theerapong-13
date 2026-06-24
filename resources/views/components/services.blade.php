@@ -37,13 +37,13 @@
             <a href="{{ route('services.index', $svc['slug']) }}" class="group flex flex-col rounded-2xl border border-line bg-white p-7 transition hover:border-accent hover:-translate-y-1 hover:shadow-2xl hover:shadow-accent/15
                            snap-start shrink-0 w-[78%] sm:w-[45%] lg:w-[31%]">
                 <span class="grid place-items-center w-14 h-14 rounded-xl bg-navy-700/8 text-navy-700 text-2xl mb-5">
-                    <i class="bi {{ $svc['icon'] }}"></i>
+                    <i class="bi {{ $svc['icon_name'] }}"></i>
                 </span>
-                <h3 class="text-xl font-bold text-navy-900">{{ $svc['name'] }}</h3>
-                <p class="mt-2 text-[15px] text-ink2 leading-relaxed flex-1">{{ $svc['desc'] }}</p>
+                <h3 class="text-xl font-bold text-navy-900">{{ $svc->title }}</h3>
+                <p class="mt-2 text-[15px] text-ink2 leading-relaxed flex-1">{{ $svc->description }}</p>
                 <div class="mt-5 pt-4 border-t border-dashed border-line flex gap-5 text-[13px] text-muted">
-                    <span>เริ่มต้น <strong class="text-navy-900 font-semibold">{{ $svc['price'] }}</strong></span>
-                    <span>ระยะงาน <strong class="text-navy-900 font-semibold">{{ $svc['dur'] }}</strong></span>
+                    <span>เริ่มต้น <strong class="text-navy-900 font-semibold">{{ number_format($svc->prices->first()->price) ?? 0, 0 }}.-/  {{ $svc->prices->first()->unit }}</strong></span>
+                    <span>ระยะงาน <strong class="text-navy-900 font-semibold">{{ $svc->dur }}</strong></span>
                 </div>
                 <span class="mt-4 inline-flex items-center gap-1.5 text-accent font-semibold text-[15px]">
                     ดูรายละเอียดบริการ <i class="bi bi-arrow-right group-hover:translate-x-1 transition"></i>

@@ -2,16 +2,20 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Service;
 use Illuminate\View\View;
 
 class HomeController extends Controller
 {
     public function index(): View
     {
+        $services = Service::all();
+        // dd($services->first()->prices->first()->price);
         return view('home.index', [
-            'services' => $this->services(),
+            // 'services' => $this->services(),
             'process'  => $this->process(),
             'faqs'     => $this->faqs(),
+            'services' => $services,
         ]);
     }
 

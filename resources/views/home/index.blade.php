@@ -5,13 +5,6 @@
 
 @section('content')
 
-    {{-- ============ UTILITY BAR ============ --}}
-    <x-utility-bar />
-
-    {{-- ============ NAV (Alpine.js สำหรับ mobile toggle) ============ --}}
-    <x-nav />
-
-    <x-breadcrumb />
 
     {{-- ============ HERO ============ --}}
     <x-hero />

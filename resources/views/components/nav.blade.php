@@ -17,15 +17,21 @@
                 class="px-3.5 py-2 rounded-lg hover:text-navy-900 hover:bg-surface transition">หน้าแรก</a>
             <a href="{{ route('services.index') }}"
                 class="px-3.5 py-2 rounded-lg hover:text-navy-900 hover:bg-surface transition">บริการ</a>
-            <a href="#projects" class="px-3.5 py-2 rounded-lg hover:text-navy-900 hover:bg-surface transition">ผลงาน</a>
-            <a href="#process"
+            <a href="{{ route('services.index') }}"
+                class="px-3.5 py-2 rounded-lg hover:text-navy-900 hover:bg-surface transition">ผลงาน</a>
+            <a href="#projects" class="px-3.5 py-2 rounded-lg hover:text-navy-900 hover:bg-surface transition">ข่าวสาร</a>
+            <a href="{{  route('home') }}#process"
                 class="px-3.5 py-2 rounded-lg hover:text-navy-900 hover:bg-surface transition">ขั้นตอน</a>
             <a href="{{ route('blog.index') }}"
                 class="px-3.5 py-2 rounded-lg hover:text-navy-900 hover:bg-surface transition">บทความ</a>
-            <a href="{{ route('portal.index') }}"
+            <a href="{{ route('blog.index') }}"
+                class="px-3.5 py-2 rounded-lg hover:text-navy-900 hover:bg-surface transition">ติดต่อ</a>
+            <a href="{{ route('blog.index') }}"
+                class="px-3.5 py-2 rounded-lg hover:text-navy-900 hover:bg-surface transition">เกี่ยวกับเรา</a>
+            <!-- <a href="{{ route('portal.index') }}"
                 class="px-3.5 py-2 rounded-lg hover:text-navy-900 hover:bg-surface transition">
                 พอร์ทัลลูกค้า <i class="bi bi-arrow-up-right text-xs"></i>
-            </a>
+            </a> -->
         </div>
 
         {{-- CTA + hamburger --}}

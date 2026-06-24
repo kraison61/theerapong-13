@@ -5,11 +5,6 @@
 
 @section('content')
 
-    {{-- ============ UTILITY BAR ============ --}}
-    <x-utility-bar />
-
-    {{-- ============ NAV ============ --}}
-    <x-nav />
 
     {{-- ============ PAGE HERO ============ --}}
     <section class="relative overflow-hidden bg-gradient-to-b from-surface to-white">
