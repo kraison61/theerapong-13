@@ -40,8 +40,10 @@
     {{-- Livewire v4: auto-injects its own scripts — ไม่ต้อง @livewireScripts --}}
     {{-- Flux UI v2.x: Alpine.js bundled inside fluxScripts --}}
     {{-- ============ CONTACT ============ --}}
-    <x-contact />
+    <x-affiliate /> 
 
+    {{-- ============ CONTACT ============ --}}
+    <x-contact />
     {{-- ============ FOOTER ============ --}}
     <x-footer :services="$services" />
 
