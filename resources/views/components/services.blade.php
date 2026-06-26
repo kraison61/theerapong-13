@@ -1,6 +1,6 @@
 @props(['services'])
 
-<section id="services" data-carousel class="mx-auto max-w-7xl px-6 py-20 lg:py-28">
+<section id="services" data-carousel class="bg-surface mx-auto max-w-7xl px-6 py-20 lg:py-28">
     <div class="flex flex-col gap-8 lg:flex-row lg:items-end lg:justify-between">
         <div class="max-w-2xl">
             <span

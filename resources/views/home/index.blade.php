@@ -10,7 +10,7 @@
     <x-hero />
 
     {{-- ============ TRUST STRIP ============ --}}
-    <x-trust />
+    <!-- <x-trust /> -->
 
     {{-- ============ SERVICES ============ --}}
     <x-services :services="$services" />
