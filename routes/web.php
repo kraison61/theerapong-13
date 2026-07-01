@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AdminController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ServiceController;
 use Illuminate\Support\Facades\Route;
@@ -23,3 +24,7 @@ Route::get('/contact', fn() => view('home.contact'))->name('contact');
 Route::get('/blog', fn() => view('blog.index'))->name('blog.index');
 
 Route::get('/portal', fn() => view('portal.index'))->name('portal.index');
+
+Route::prefix('admin')->name('admin.')->group(function () {
+    Route::resource('/',AdminController::class);
+});
