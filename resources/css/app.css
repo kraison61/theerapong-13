@@ -27,6 +27,7 @@
 
     --font-sans: "IBM Plex Sans Thai", "IBM Plex Sans", ui-sans-serif, system-ui, sans-serif;
     --font-mono: "IBM Plex Sans", ui-sans-serif, system-ui, sans-serif;
+    --font-prompt: "Prompt", ui-sans-serif, system-ui, sans-serif;
 }
 
 /*

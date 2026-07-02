@@ -1,8 +1,10 @@
 <?php
 
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\AdminController;
 use App\Livewire\Admin\Index as AdminIndex;
 use App\Http\Controllers\ServiceController;
+use App\Http\Controllers\AdminServiceController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -26,5 +28,6 @@ Route::get('/blog', fn() => view('blog.index'))->name('blog.index');
 Route::get('/portal', fn() => view('portal.index'))->name('portal.index');
 
 Route::prefix('admin')->name('admin.')->group(function () {
-    Route::get('/', AdminIndex::class)->name('index');
+    Route::get('/', [AdminController::class,'index'])->name('index');
+    Route::get('/service/form', [AdminServiceController::class,'create'])->name('service.form');
 });
